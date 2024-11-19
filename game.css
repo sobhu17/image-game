@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Completely hide the game container */
+.hidden-container {
+    display: none !important; /* Ensure it's fully removed */
+}
+
+
+.game-container {
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+select {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#countdown {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.grid {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid div {
+    width: 70px;
+    height: 70px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.grid div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    visibility: hidden; /* Initially hidden */
+}
+
+.grid div img.visible {
+    visibility: visible;
+}
+
+.grid div.revealed {
+    background-color: #4caf50;
+    cursor: default;
+}
+
+
+#play-again {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+#play-again:hover {
+    background-color: #e64a19;
+}
+
+
+#solve-timer {
+    font-size: 18px;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+#score {
+    font-size: 18px;
+    color: #4caf50;
+    margin-bottom: 10px;
+}
+
+/* Leaderboard Container */
+#leaderboard-page {
+    text-align: center;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Leaderboard Heading */
+#leaderboard-page h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Leaderboard List */
+#leaderboard-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 10px 0;
+}
+
+#leaderboard-list li {
+    font-size: 18px;
+    margin: 8px 0;
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Player Name and Score Alignment */
+#leaderboard-list li span {
+    display: inline-block;
+    width: 45%;
+    text-align: left;
+}
+
+#leaderboard-list li span.score {
+    text-align: right;
+    color: #4caf50;
+}
+
+/* Play Again Button */
+#play-again-from-leaderboard {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#play-again-from-leaderboard:hover {
+    background-color: #0056b3;
+}

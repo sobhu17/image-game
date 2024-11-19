@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Matching Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Game Setup Section -->
+        <div class="game-setup">
+            <h1>Image Matching Game</h1>
+            <form id="setup-form">
+                <label for="pairs">Select Number of Pairs:</label>
+                <select id="pairs">
+                    <option value="8">8 Pairs</option>
+                    <option value="10">10 Pairs</option>
+                    <option value="12">12 Pairs</option>
+                </select>
+
+                <label for="difficulty">Select Difficulty:</label>
+                <select id="difficulty">
+                    <option value="3">3 Seconds</option>
+                    <option value="5">5 Seconds</option>
+                    <option value="8">8 Seconds</option>
+                </select>
+
+                <button type="button" id="start-game">Start Game</button>
+            </form>
+        </div>
+
+        <div id="game-grid" class="hidden">
+            <div id="countdown"></div>
+            <div id="solve-timer"></div>
+            <div id="score">Score: 0</div>
+            <div class="grid"></div>
+            <button id="play-again" class="hidden">Play Again</button>
+        </div>
+        
+
+        <!-- Confetti Animation -->
+        <div id="confetti" class="hidden"></div>      
+    </div>
+
+    <div id="leaderboard-page" class="hidden">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list">
+            <!-- Example Entry -->
+            <!-- <li><span>Player Name</span><span class="score">80</span></li> -->
+        </ul>
+        <button id="play-again-from-leaderboard">Play Again</button>
+    </div>
+    
+    
+
+    <script src="game.js"></script>
+</body>
+</html>
